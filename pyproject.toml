@@ -143,11 +143,15 @@ ignore = [
     "E501",  # line too long (handled by black)
     "B008",  # do not perform function calls in argument defaults
     "W191",  # indentation contains tabs
+    "B904",  # raise from err (stylistic choice for exception handling)
+    "UP028", # yield from (stylistic choice)
 ]
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]  # Allow unused imports in __init__.py
-"tests/*" = ["ARG"]       # Allow unused arguments in tests
+"tests/*" = ["ARG", "F841"]  # Allow unused arguments and variables in tests
+"app/main.py" = ["ARG001"]   # Allow unused lifespan app argument (required by FastAPI)
+"app/core/rag_chain.py" = ["ARG002"]  # Allow unused arguments for API consistency
 
 [tool.ruff.lint.isort]
 known-first-party = ["app"]

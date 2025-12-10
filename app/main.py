@@ -2,7 +2,9 @@
 
 # IMPORTANT: Load .env file FIRST, before any LangChain imports
 # This ensures LangSmith environment variables are available for tracing
+# ruff: noqa: E402, I001
 from dotenv import load_dotenv
+
 load_dotenv()
 
 from contextlib import asynccontextmanager

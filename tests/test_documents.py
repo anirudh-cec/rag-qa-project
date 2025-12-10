@@ -1,10 +1,7 @@
 """Tests for document processing and endpoints."""
 
 import io
-from pathlib import Path
 from unittest.mock import MagicMock, patch
-
-import pytest
 
 
 class TestDocumentProcessor:

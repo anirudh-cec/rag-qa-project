@@ -1,7 +1,8 @@
 """Tests for RAGAS evaluator module."""
 
+from unittest.mock import MagicMock, patch
+
 import pytest
-from unittest.mock import MagicMock, patch, AsyncMock
 from datasets import Dataset
 
 from app.core.ragas_evaluator import RAGASEvaluator
